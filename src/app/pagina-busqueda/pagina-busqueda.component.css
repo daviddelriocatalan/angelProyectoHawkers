@@ -1,0 +1,118 @@
+.body{
+    text-align: center;
+    font-family: Lucida Console, Monaco, monospace;
+}
+
+.titulo{
+    padding: 30px;
+}
+
+.inputBoton{
+    padding: 30px;
+}
+
+input {
+    display: block;
+    margin: 2em auto;
+    border: none;
+    padding: 0;
+    width: 12ch;
+    background: repeating-linear-gradient(90deg, dimgrey 0, dimgrey 1ch, transparent 0, transparent 1.5ch) 0 100%/ 11.5ch 2px no-repeat;
+    font: 5ch droid sans mono, consolas, monospace;
+    letter-spacing: 0.5ch;
+}
+input:focus {
+    outline: none;
+    color: dodgerblue;
+}
+
+.contenedorFotico {
+    /*background-color:red;*/
+    margin: 20px;
+    display: grid;
+    justify-content: space-evenly;
+    grid-template-columns: auto 640px auto;
+}
+
+.promo1 {
+    padding-top: 50%;
+    /*background-color: blue;*/
+    margin: 0 auto;
+    animation-name: example;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.promo2 {
+    padding-top: 50%;
+    /*background-color: green;*/
+    margin: 0 auto;
+    animation-name: example;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes example {
+    0%   {font-size: 100%;}
+    25%  {font-size: 112%;}
+    50%  {font-size: 125%;}
+    75%  {font-size: 112%;}
+    100% {font-size: 100%;}
+}
+
+.fotico {
+    /*background-color: yellow;*/
+    width: 640px;
+    height: 320px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+img {
+    width: 640px;
+    height: 320px;
+}
+
+button {
+    border: none;
+    padding: 1em;
+    outline: none;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-style: 1.2em;
+    letter-spacing: 0.2em;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    background: none;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, .45);
+}
+button:before, button:after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 10em;
+    transform: translateX(-50%) translateY(-50%);
+    width: 105%;
+    height: 105%;
+    content: '';
+    z-index: -2;
+    background-size: 400% 400%;
+    background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+}
+button:before {
+    filter: blur(7px);
+    transition: all 0.25s ease;
+    animation: pulse 10s infinite ease;
+}
+button:after {
+    filter: blur(0.3px);
+}
+button:hover:before {
+    width: 115%;
+    height: 115%;
+}
+
